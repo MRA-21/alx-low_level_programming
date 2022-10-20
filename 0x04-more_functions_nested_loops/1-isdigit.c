@@ -1,33 +1,35 @@
 #include "main.h"
 
+
+
 /**
  *
- *  * print_alphabet - prints all alphabets in lowercase.
+ *  * _isdigit - checks if parameter is a number between 0 to 9.
  *
- *   * Return: On success 1.
+ *   * @c: input number.
  *
- *    */
+ *    * Return: 1 if is a number (0 to 9), 0 in other case.
+ *
+ *     */
 
-void print_alphabet(void)
+int _isdigit(int c)
 
 {
 
-		char i;
+		if (c >= 48 && c <= 57)
 
+				{
 
-
-			for (i = 'a'; i <= 'z'; i++)
-
-					{
-
-							_putchar(i);
+							return (1);
 
 								}
 
-				_putchar('\n');
+			else
 
+					{
 
+								return (0);
+
+									}
 
 }
-
-
