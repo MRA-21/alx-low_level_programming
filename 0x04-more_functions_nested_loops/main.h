@@ -1,33 +1,33 @@
-#ifndef main_h
+#ifndef _MAIN_H_
 
-#define main_h
+#define _MAIN_H_
 
-extern int _putchar(char c);
 
-extern void print_alphabet(void);
 
-extern void print_alphabet_x10(void);
+int _isupper(int c);
 
-extern int _islower(int c);
+int _isdigit(int c);
 
-extern int _isalpha(int c);
+int mul(int a, int b);
 
-extern int print_sign(int n);
+void print_numbers(void);
 
-extern int _abs(int);
+int _putchar(char);
 
-extern int print_last_digit(int);
+void print_most_numbers(void);
 
-extern void jack_bauer(void);
+void more_numbers(void);
 
-extern void times_table(void);
+void print_line(int n);
 
-extern int add(int, int);
+void print_diagonal(int n);
 
-extern void print_to_98(int n);
+void print_square(int size);
 
-extern void print_times_table(int n);
+void print_triangle(int size);
+
+void print_number(int n);
+
+
 
 #endif
-
-
