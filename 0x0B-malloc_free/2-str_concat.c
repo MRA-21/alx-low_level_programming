@@ -1,20 +1,20 @@
-nclude <stdlib.h>
-
 #include "main.h"
+
+#include <stdlib.h>
 
 
 
 /**
  *
- *  * *str_concat - concatenates two strings
+ *  * str_concat - concatenates two strings.
  *
- *   * @s1: string to concatenate
+ *   * @s1: first string.
  *
- *    * @s2: other string to concatenate
+ *    * @s2: second string.
  *
  *     *
  *
- *      * Return: pointer to the new string created (Success), or NULL (Error)
+ *      * Return: pointer of an array of chars
  *
  *       */
 
@@ -22,78 +22,70 @@ char *str_concat(char *s1, char *s2)
 
 {
 
-		char *s3;
+		char *strout;
 
-			unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
-
-
-
-				while (s1 && s1[len1])
-
-							len1++;
-
-					while (s2 && s2[len2])
-
-								len2++;
+			unsigned int i, j, k, limit;
 
 
 
-						s3 = malloc(sizeof(char) * (len1 + len2 + 1));
+				if (s1 == NULL)
 
-							if (s3 == NULL)
+							s1 = "";
 
-										return (NULL);
+					if (s2 == NULL)
 
-
-
-								i = 0;
-
-									j = 0;
+								s2 = "";
 
 
 
-										if (s1)
+						for (i = 0; s1[i] != '\0'; i++)
 
-												{
-
-															while (i < len1)
-
-																		{
-
-																						s3[i] = s1[i];
-
-																									i++;
-
-																											}
-
-																}
+									;
 
 
 
-											if (s2)
+							for (j = 0; s2[j] != '\0'; j++)
 
-													{
+										;
 
-																while (i < (len1 + len2))
 
-																			{
 
-																							s3[i] = s2[j];
+								strout = malloc(sizeof(char) * (i + j + 1));
 
-																										i++;
 
-																													j++;
 
-																															}
+									if (strout == NULL)
+
+											{
+
+														free(strout);
+
+																return (NULL);
 
 																	}
 
-												s3[i] = '\0';
+
+
+										for (k = 0; k < i; k++)
+
+													strout[k] = s1[k];
 
 
 
-													return (s3);
+											limit = j;
+
+												for (j = 0; j <= limit; k++, j++)
+
+															strout[k] = s2[j];
+
+
+
+													return (strout);
 
 }
+
+
+
+
 
 
